@@ -2,7 +2,7 @@
 unit tests for the calculator functions
 """
 # import pytest
-from calculator import get_numbers, add_numbers
+from calculator import get_numbers, add_numbers, multiply_numbers
 from unittest.mock import patch
 
 
@@ -28,6 +28,24 @@ def test_add_numbers_empty():
     assert add_numbers([]) == 0
 
 
+    def test_multiply_numbers_positive():
+        # multiplication with positive numbers
+        assert multiply_numbers([2, 3, 4]) == 24
+        assert multiply_numbers([2, 10]) ==20
+
+
+        def test_multipy_numbers_single():
+            #test multiplication with single numbers
+            assert multiply_numbers([1]) ==1
+            assert multiply_numbers([3]) ==3
+
+
+        def test_multiply_numbers_nagetives():
+            #tesr multiplication with nagetive numbers
+            assert multiply_numbers([2, -10]) ==-20
+            assert multiply_numbers([-4, -4]) ==16
+
+            
 @patch('builtins.input', side_effect=['5', '10', 'done'])
 def test_get_numbers_valid(mock_input):
     # test getting valid numbers from user
