@@ -2,7 +2,7 @@ name: Calculations
 
 on:
   push: 
-    branches: [main, develop]
+    branches: [main, my-feature-branch]
   pull_request:
     branches: [main]  
 
