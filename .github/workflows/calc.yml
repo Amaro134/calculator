@@ -25,7 +25,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: run flake8
-      run: flake8 calculator.py
+      run: flake8 cal.py
 
   test:
     runs-on: ubuntu-latest

@@ -1,3 +1,8 @@
+"""
+A simple command line calculator that performs addition and multiplication
+"""
+
+
 def get_numbers():
     numbers = []
     print("Enter numbers (type 'done' when finished): ")
@@ -18,6 +23,7 @@ def get_numbers():
 
 
 def add_numbers(numbers):
+    """Return the sum of numbers"""
     return sum(numbers)
 
 
@@ -40,6 +46,9 @@ def main():
     print("\n What operation would you like to perform?")
     print("1. Add")
     print("2.Mutiply")
+
+    # choice = input("enter your choice (1 or 2): ")
+
     choice = input("enter ").strip()
     if choice == '1':
         result = add_numbers(numbers)
