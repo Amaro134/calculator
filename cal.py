@@ -20,6 +20,7 @@ def get_numbers():
 def add_numbers(numbers):
     return sum(numbers)
 
+
 def multiply_numbers(numbers):
     result = 1
     for number in numbers:
@@ -45,9 +46,10 @@ def main():
         print(f"\n Result: {' + '.join(map(str, numbers))} = {result}")
     elif choice == '2':
         result = multiply_numbers(numbers)
-        print(f"\n Result: {' + '.join(map(str, numbers))} = {result}")    
+        print(f"\n Result: {' + '.join(map(str, numbers))} = {result}")
     else:
         print("invalid choice")
+
 
 if __name__ == "__main__":
     main()
